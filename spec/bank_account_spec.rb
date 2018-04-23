@@ -10,4 +10,12 @@ describe Bank_Account do
       expect(subject.balance).to eq(10)
     end
   end
+
+  describe '#withdraw' do
+    it 'withdraws money from account and updates balance' do
+      subject.deposit(10)
+      subject.withdraw(3)
+      expect(subject.balance).to eq(7)
+    end
+  end
 end
