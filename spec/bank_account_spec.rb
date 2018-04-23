@@ -18,4 +18,6 @@ describe Bank_Account do
       expect(subject.balance).to eq(7)
     end
   end
+
+  descri
 end
