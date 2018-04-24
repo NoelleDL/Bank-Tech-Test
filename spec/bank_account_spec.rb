@@ -17,7 +17,10 @@ describe Bank_Account do
       subject.withdraw(3)
       expect(subject.balance).to eq(7)
     end
-  end
 
-  descri
+    it 'raises error when there are insufficient funds' do
+      subject.deposit(10)
+      expect { subject.withdraw(15) }.to raise_error 'Insufficient funds'
+    end
+  end
 end
